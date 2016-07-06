@@ -23,9 +23,10 @@
 		<th>Color</th>
 	</tr>
 	<tr ng-repeat="items in controller.inventory" class="tblBody">
-		<td>{{items.name}}</td>
+		<td>{{items.name}}<img ng-hide="items.discount === 0" src="images/sale.png"></td>
+
 		<td>{{items.quantity}}</td>
-		<td>{{items.price}}</td>
+		<td>{{((items.price-items.discount)*1.0575).toFixed(2)}}</td>
 		<td>{{items.color}}</td>
 	</tr>
 </table>
