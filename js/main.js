@@ -20,6 +20,7 @@
 		  { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
 		]
 
+		vm.tax = 0.0575;
 		vm.ShowTag = function(discount){
 			if (discount === 0){
 				return false;
@@ -28,8 +29,17 @@
 				return true;
 			}
 		}
+<<<<<<< HEAD
   })
   //hello
+=======
+
+		vm.getTotalPrice = function(price, discount){
+			 var price = (price - discount) * vm.tax + (price - discount);
+			return price.toFixed(2);
+			}
+		});
+>>>>>>> 573d72ed5835a873015551242f763c3914322c14
 
 
 })();
