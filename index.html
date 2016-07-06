@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="InventoryApp">
 <head>
 	<!--Google Font-->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -15,6 +15,20 @@
 </head>
 <body>
 
+<table ng-controller="tblController as controller">
+	<tr class="tblHeader">
+		<th>Name</th>
+		<th>Quantity</th>
+		<th>Price</th>
+		<th>Color</th>
+	</tr>
+	<tr ng-repeat="items in controller.inventory" class="tblBody">
+		<td>{{items.name}}</td>
+		<td>{{items.quantity}}</td>
+		<td>{{items.price}}</td>
+		<td>{{items.color}}</td>
+	</tr>
+</table>
 
 	<!--Angular script after npm install angular in Terminal-->
 	<script src="/node_modules/angular/angular.js"></script>
