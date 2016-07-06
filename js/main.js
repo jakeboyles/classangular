@@ -20,6 +20,14 @@
 		  { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
 		]
 
+		vm.ShowTag = function(discount){
+			if (discount === 0){
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
   })
 
 
